@@ -34,7 +34,10 @@ def main():
     eqrows=13
     eqncount=eqrows*16
     count=len(wordlist)+imgcount+eqncount
-    print('word count = '+str(count))
-
+    print('words in main text (including inline equations): '+str(len(wordlist)))
+    print('word equivalent of images: '+str(imgcount))
+    print('word equivalent of displayed equations: '+str(eqncount))
+    print('total word count = '+str(count))
+    
 if __name__=='__main__':
     main()
