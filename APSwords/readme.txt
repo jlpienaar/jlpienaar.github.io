@@ -2,7 +2,7 @@ Hello!
 
 Welcome to the APSwords README.
 
-ABOUT------------------------------------------------------------------------------------------------------------------------------
+ABOUT:
 
 APSwords.py is a short script I wrote in Python 3 to count the number of words in a .tex file according to the APS guidelines found here: https://journals.aps.org/authors/length-guide.
 
@@ -16,7 +16,7 @@ Word count equivalents for figures and displayed equations are computed separate
 
 This is a work in progress.
 
-HOW TO USE-------------------------------------------------------------------------------------------------------------------------
+USAGE:
 
 1. Name the file you want to count "text2.tex".
 2. Download APSwords.py to the same folder as "test2.tex". 
