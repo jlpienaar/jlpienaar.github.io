@@ -1,49 +1,117 @@
 /*
-	Visualize by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$(function() {
+(function($) {
 
-	// Vars.
-		var	$window = $(window),
-			$body = $('body'),
-			$wrapper = $('#wrapper');
+	var $window = $(window),
+		$body = $('body'),
+		$header = $('#header'),
+		$footer = $('#footer'),
+		$main = $('#main'),
+		settings = {
+
+			// Parallax background effect?
+				parallax: true,
+
+			// Parallax factor (lower = more intense, higher = less intense).
+				parallaxFactor: 20
+
+		};
 
 	// Breakpoints.
-		skel.breakpoints({
-			xlarge:	'(max-width: 1680px)',
-			large:	'(max-width: 1280px)',
-			medium:	'(max-width: 980px)',
-			small:	'(max-width: 736px)',
-			xsmall:	'(max-width: 480px)'
+		breakpoints({
+			xlarge:  [ '1281px',  '1800px' ],
+			large:   [ '981px',   '1280px' ],
+			medium:  [ '737px',   '980px'  ],
+			small:   [ '481px',   '736px'  ],
+			xsmall:  [ null,      '480px'  ],
 		});
 
-	// Disable animations/transitions until everything's loaded.
-		$body.addClass('is-loading');
-
+	// Play initial animations on page load.
 		$window.on('load', function() {
-			$body.removeClass('is-loading');
+			window.setTimeout(function() {
+				$body.removeClass('is-preload');
+			}, 100);
 		});
 
-	// Poptrox.
-		$window.on('load', function() {
+	// Touch?
+		if (browser.mobile) {
 
-			$('.thumbnails').poptrox({
-				onPopupClose: function() { $body.removeClass('is-covered'); },
-				onPopupOpen: function() { $body.addClass('is-covered'); },
-				baseZIndex: 10001,
-				useBodyOverflow: false,
-				usePopupEasyClose: true,
-				overlayColor: '#000000',
-				overlayOpacity: 0.75,
-				popupLoaderText: '',
-				fadeSpeed: 500,
-				usePopupDefaultStyling: false,
-				windowMargin: (skel.breakpoint('small').active ? 5 : 50)
+			// Turn on touch mode.
+				$body.addClass('is-touch');
+
+			// Height fix (mostly for iOS).
+				window.setTimeout(function() {
+					$window.scrollTop($window.scrollTop() + 1);
+				}, 0);
+
+		}
+
+	// Footer.
+		breakpoints.on('<=medium', function() {
+			$footer.insertAfter($main);
+		});
+
+		breakpoints.on('>medium', function() {
+			$footer.appendTo($header);
+		});
+
+	// Header.
+
+		// Parallax background.
+
+			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+				if (browser.name == 'ie'
+				||	browser.mobile)
+					settings.parallax = false;
+
+			if (settings.parallax) {
+
+				breakpoints.on('<=medium', function() {
+
+					$window.off('scroll.strata_parallax');
+					$header.css('background-position', '');
+
+				});
+
+				breakpoints.on('>medium', function() {
+
+					$header.css('background-position', 'left 0px');
+
+					$window.on('scroll.strata_parallax', function() {
+						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+					});
+
+				});
+
+				$window.on('load', function() {
+					$window.triggerHandler('scroll');
+				});
+
+			}
+
+	// Main Sections: Two.
+
+		// Lightbox gallery.
+			$window.on('load', function() {
+
+				$('#two').poptrox({
+					caption: function($a) { return $a.next('h3').text(); },
+					overlayColor: '#2c2c2c',
+					overlayOpacity: 0.85,
+					popupCloserText: '',
+					popupLoaderText: '',
+					selector: '.work-item a.image',
+					usePopupCaption: true,
+					usePopupDefaultStyling: false,
+					usePopupEasyClose: false,
+					usePopupNav: true,
+					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				});
+
 			});
 
-		});
-
-});
+})(jQuery);
