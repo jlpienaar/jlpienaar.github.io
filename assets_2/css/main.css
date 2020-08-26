@@ -2070,7 +2070,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background: url("images/overlay.png");
+			background: url("images_2/overlay.png");
 			border-radius: 0.35em;
 			content: '';
 			display: block;
@@ -2115,7 +2115,7 @@ input, select, textarea {
 			} 
 
 			.image.thumb:hover:before {
-				background: url("images/overlay.png"), url("images/overlay.png");
+				background: url("images_2/overlay.png"), url("images_2/overlay.png");
 				opacity: 1.0;
 			}
 
@@ -2623,7 +2623,7 @@ input, select, textarea {
 		background-color: #3d3041;
 		/* Shows at bottom of bg image. originally: #1f1815 */
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images_2/overlay.png"), url("../../images_2/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -3109,7 +3109,7 @@ input, select, textarea {
 				background-attachment: scroll;
 				background-color: #1f1815;
 				/* No idea */
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-image: url("images_2/overlay.png"), url("../../images_2/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
