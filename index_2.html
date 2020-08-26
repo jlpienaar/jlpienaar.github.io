@@ -83,14 +83,16 @@
 						<p>Especially if you are a lovely person, also if you are witty</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="https://formspree.io/mnqgykej">
+								<form id="form_contact" method="post" action="https://formspree.io/mnqgykej">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" maxlength=30 /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="replyto" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
+								</form>
+								<form method="post" >
 								<ul class="actions">
-									<li><input type="submit" value="Send Message"/>
+									<li><input type="submit" form="form_contact" value="Send Message"/>
 									</li>
 								</ul>
 								</form>
