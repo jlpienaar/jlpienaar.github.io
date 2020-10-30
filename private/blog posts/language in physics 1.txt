@@ -1,0 +1,91 @@
+PHYSICS AND LANGUAGE: 
+HOW CAN WE SPEAK OF THE UNSPEAKABLE?
+
+Physics has a difficult relationship with language. 
+
+The reason is simple. As physicists, we are concerned with things that seem to exist beyond language. Many cultures and civilizations have looked at the sun and described it in vastly different ways, using not only different words, but also different ideas. Yet, the physicist knows that there is an important link between all of these different experiences. The link is made through science. We know that if any of these cultures were to measure the path of the sun across the sky, they would discover that there is a mathematical rule that tells us exactly what path the sun will take, as a function of the geographic location and the time of the year. And any two cultures, no matter how different their languages and the stories they tell about it, when it boils down to bare numbers, will all agree that the sun's motion is predictable by the same mathematical rule.
+
+How is this agreement possible? It is made possible by one simple and astounding fact about the universe: that when we express all of our observations in terms of numerical quantities -- how many feet? how many days? how much weight in stones? -- then we find that vastly different cultures with vastly different languages and beliefs will nevertheless come to agree on the outcomes of observations. 
+
+Let us try to get to the bottom of things by using an example. To keep things simple, suppose that there are two villages, Arboria and Corporia, which stand neaby but whose inhabitants have very different languages, beliefs and cultural traditions. 
+
+The Arborists believe that the universe is an enormous fruit that hangs on a giant Cosmic Tree. They speak a language called Arboreal, which sounds like the whispering of leaves. The Arborists have recently begun to measure distances and times in a scientific way. In order to settle arguments about how far certain distances are, and how long certain times are, they have taken a branch from their sacred apple tree, which has a single ripe apple suspended from it. All distances are measured in terms of this sacred Branch: specifically how many times the Branch must be laid down in order to cover a given distance. And the durations of all processes are measured in terms of the sacred Apple: how many times the apple swings back and forth for the duration of the process. In this way they have begun to quantify distances and times into numbers using an agreed-upon convention.
+
+The second group of people are called the Corporalists. They believe the universe is the beating heart of an enormous giant, and they speak a language called Corporeal. They too have begun to make standardized measurements of distance and time, but unlike the arborists, they do not have a sacred tree branch or an apple. Instead, the Corporalists have a sacred person in their village, called the Chosen One. All distances are measured by the feet of the Chosen One: how many times the Chosen One's feet must be placed toe-to-heel in order to cover the distance. Similarly, the durations of all processes are measured by the Chosen One's heart: how many times their heart beats during the process. In this way they have also quantified distances and times into numbers, using a different convention than the Arborists.
+
+For a long time, the Arborists and Corporalists live in their separate villages, pursuing independent scientific inquiry into their own worlds, and elaborating their own independent religions. However, this begins to change as the villages begin to interact and trade with one another. 
+
+In order to trade effectively, the two villages need to understand each other's languages. For example, in order to make it easier to trade apples, the Arborist points to an apple and says "Lipa" which is the Arboreal word for apple, and then the Corporalist smiles and says "Troof" which is the Corporeal word for apple. Since both parties can see and understand what is being signified by pointing with a finger -- namely the apple -- they are able to establish a translation between their two languages. Of course, the translation is not perfect, because there are some concepts that exist only in Arboreal culture that have no counterpart in Corporeal culture, and vice-versa. Since these concepts have no object that can simply be pointed to, no common word can be established. But for things which have an immediate presence, like apples and chickens, or even actions like attacking, eating, or running -- therefore most things of practical importance -- the two cultures are eventually able to understand one another's words.
+
+Their next challenge comes in the form of a scientific disagreement. Both the Arborists and the Corporalists have observed that any object, when dropped from any height, will fall down to the ground. The Arborists say it is because all things are the fruit of the Cosmic Tree and all fruits must fall. The Corporalists say it is because all things must move from the Head to the Feet of the great giant. Nevertheless, they both agree that everything falls.
+
+But do they agree on how quickly things fall? The scientists of each group make their own experiments, dropping objects from various heights and measuring the distances covered in different time intervals. The Arborists determine that when any smooth, solid object is dropped from any height, then after falling for one Apple-swing of duration, the object will have attained a velocity of about 10 Branches per Apple-swing. The Corporalists determine that after two Heartbeats, the falling object will have attained a velocity of 15 Feet per Heartbeat.
+
+It seems at first as though the two cultures have observed different laws of physics! But are the laws really different?
+
+For many days, the scientists of the two groups get together in a hut and have long arguments about what is the correct law of falling. The Arborists insist it is 10 Branches per Apple-swing (after one Apple-swing), while the Corporalists counter that it is not 10 but 15 Feet per Heartbeat (after two Heartbeats). 
+
+Each side blames the discrepancy on the other side using the wrong instruments to measure distances and times. "Why would you use a human being to measure distances and times," the Arborists complain, "when a human being has no relevance to the Cosmic Tree?" In response, the Corporalists say "your Cosmic Tree is a fiction! Our Chosen One perfectly corresponds to the form of the great giant. It is you who are getting the wrong answers by refusing to measure all things by the human form."
+
+At last, one of the wiser members of the community suggests that perhaps there is no contradiction. Maybe, she suggests, the figure of 10 Branches per Apple-swing after an Apple-swing is in fact fully equivalent to the figure of 15 Feet per Heartbeat after two Heartbeats. At first there is some skepticism from the other intellectuals.
+
+"You say that they are `equivalent', but how can we possibly know that? Branches and Apple-swings are fundamentally different to Feet and Heartbeats. We humble humans have no way of knowing, by our limited observations, whether these quantities are in some sense equivalent or not. Only a powerful being like a god who could see into the true nature of things, could be able to say whether the true distance that is represented by 10 branches is the same as the true distance that is represented by 15 Feet." 
+
+The wise scientist replies that there is no need to invoke religion in order to make the comparison. A simple experiment can settle the matter.
+
+"Why not agree to each use our different units to measure the same thing", she suggests, "for example, the length of this hut in which we all stand? First we measure it in Branches, then we measure it in Feet. This will give us a way of translating numbers of Branches into numbers of Feet."
+
+The wise scientist, as it happens, was also a linguist. She realized that the same principle that allowed the two cultures to understand each other's word for "apple", could also be used to translate between the two cultures' preferred measuring units. In the case of the apple, both sides were able to point to the same apple and say their own word for it, and each side would then understand intuitively that by pointing at the apple, they were indicating it as the object to which their words corresponded. 
+
+Similarly, by having both sides agree to measure the distance of the same hut, it would be understood that the number of Branches needed to measure this distance would have to indicate the same `true distance' as the number of Feet needed to measure it. For it was obvious to everyone that the length of the hut did not change depending on whether one measured it using Branches or Feet, just as an apple does not change into a peach depending on what name we give to it.
+
+In this way, the scientists quickly determined that there were in fact about 3 Feet to every Branch. Excitedly they set about doing the same thing for time. They agreed upon a physical process -- the time needed for a leaky bucket to become empty of water -- and they measured it simultaneously in terms of Apple-swings and Heartbeats. They determined that one Apple-swing was equivalent to two Heartbeats worth of time. So, at last, each side could translate their measurements into the units of the other, and the laws of physics that each group had discovered could be compared. 
+
+We know the result: 10 Branches per Apple-swing, after one Apple-swing, translates into 30 Feet per two Heartbeats, after two Heartbeats, which in turn is equivalent to 15 Feet per Heartbeat (singular!), after two Heartbeats. The laws looked different when they were expressed in different units, but since the units can be translated into each other, we can see that both cultures have observed the same law of physics.
+
+This astonishing agreement between two people that shared neither language, nor culture, nor religion, was dramatically demonstrated one day by two of the bravest scientists from each village.
+Both scientists stood side by side, at the bottom of a tall tower. At the top of the tower, two assistants stood holding big rocks. At the sound of a trumpet, both students would drop their rocks, which would plummet towards the exposed heads of the scientists standing below.
+Each scientist had been allowed to calculate the exact moment when the falling rock would reach them, allowing them to step out of its path just in time. However, to perform this calculation, each one had to use only the measuring instruments of his own culture. The Arborist had measured the height of the tower in Branches, and had to count time by looking at the number of swings of the sacred Apple, which was suspended in front of him. The Corporalist had measured the height of the tower in Feet, and had to count time by feeling the pulse of the Chosen One who stood beside him. Each scientist calculated exactly how long they could wait after the trumpet before stepping out of the path of the rock, but one calculated it in Apple-swings, and the other in Heartbeats.
+
+The trumpet blew, the rocks were dropped. The Arborist stepped away after 3 Apple-swings, while the Corporalist stepped away after 6 Heartbeats (it should be mentioned that the Chosen One has a remarkably steady heartbeat even in very tense situations -- why do you think she was Chosen?). Both scientists stepped out of the way at exactly the same moment, barely escaping the falling rocks. It was confirmed: both tribes had discovered the same law of physics, and despite their different numbers, both were correct.
+
+Of course, the Arborists still believed that things fell because of the Cosmic Tree, and the Corporalists still believed it was because of their Great Giant. But for the first time, it began to seem possible that one day even those disagreements might be resolved by some grand experiment. For the first time it began to seem that the linguistic and cultural differences between the tribes did not confine them to live in separate universes: the mathematical rules of science, expressed as measurable numbers, showed that the world they discovered through their scientific instruments was common to both of them.
+
+Historically, it was Galileo who realized the power of mathematics as a universal tool for understanding the natural world. By systematically converting all observations into numbers, through the act of measurement, one could speak of laws of physics as symbolic relationships that held just the same for all languages, cultures, and for all units of measurement. He recognized that mathematics is a language that is capable of expressing universal experiences. And since physics aims at describing those facts about the world that apply equally to everyone, mathematics is the appropriate language for physics.
+
+This is where physics's difficult relationship with language begins. I have said mathematics is a language -- a special one, perhaps, but a language nonetheless. But isn't it more than that? Could it be that when we speak in mathematical terms, we are not using language, so much as we are transcending language, to speak of truths that hold beyond language? I'll take up this question in the next post of this series.
+
+***
+Old inspiration:
+
+On one hand, a major part of the goal of physics is to transcend the limitations of language in order to describe concepts that lie beyond our direct experience, like atoms and galaxies. This is done by using mathematics, which we tend to think of as a universal language. On the other hand, physicists have to bridge the gap between pure mathematics and the messy reality of experience, and that means translating our symbols scribbled on paper and chalkboards into more familiar language (predominantly English these days). Even then, this first step doesn't result in the kind of English that your grandmother could read: it is a cryptic technical version of English that uses "jargon" words borrowed from English but given new highly specific meanings that can only be decoded by other scientists in the field. For instance, here's a sentence I just took from one of the academic papers I recently downloaded:
+
+`Clearly, a positive trace-preserving linear map is always a well-defined statistical morphism, for any channel'.
+
+If you look at each word separately, you will recognize the usual English meanings for all of them except the word `morphism'. For instance, `trace' is like a trail, and `channel' sounds like a TV channel. `Morphism' is obviously a made-up word, but you could imagine that means something like `transformation'. But when you mash them together into that sentence, it becomes nonsense. We know what a `map' is, but what on earth could it mean to call a map `linear'? Maybe it means a map of something that is shaped like a line, like a river or a hiking trail? By the time you get to `channel', if you make it that far, the picture in your head just looks like pure nonsense. 
+
+In fact, this particular sentence will look like nonsense to most physicists except those who work in quantum information theory. Most of them will recognize `channel' as a technical word for something like a telephone line. Even among these specialists, very few will have encountered the term `statistical morphism' used in this way, and will have to look up the relevant paper to fully decode the sentence. That gives you some idea of just how precisely targeted the meaning of English words is when used in a technical physics paper. But that is okay, because at this level the communication is just between experts in the field that helps them organize their activities, including building theories and experiments. 
+
+Trouble comes when experts try to explain their work to journalists or the public, or even when they talk to other experts from different fields. Then it becomes clear that a single word can have many different meanings, and it is all too easy to get into long arguments just because two people are using the same word to mean different things. In these cases the fact that the different parties are all speaking the same language actually turns out to get in the way of communication. It would almost be better if we simply made up non-English words for each new concept, so that someone unfamiliar with the specialized meaning would know to ask "what do you mean by that?" instead of assuming that they know the answer.
+
+There's a name for words that trip us up by their multiple meanings: they are called "weasel words", because they are as wiggly and sly as weasels and you can't ever seem to get a hold of them. ...
+ 
+Confusions like this one only scratch the surface of the debates that physicists get involved in, and that is to say nothing of what happens when they try to communicate with journalists and the public. 
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
