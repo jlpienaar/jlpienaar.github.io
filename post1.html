@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jacques Pienaar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/academicons/css/academicons.min.css"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Jacques Pienaar</strong>
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Host your own website on Github for free</h2>
+						</header>
+						<p> Woohoo, I just set up my own website! But it took me nearly two full days. Shouldn't it be simpler than that? Or am I just stupid? (The answer: a bit of both).
+						</p>
+						<p>
+						Some of you reading this already have your own website. Maybe you even have a really nice website that you whipped up super quick while drinking a latte at the corner café. Well if so, then I hate you with a deep and everlasting passion. But this post isn't for you.  
+						</p>
+						<p>
+						It's for people like me: people who like learning new stuff, who are not afraid of tech and typing things at the command line, who have a can-do attitude towards the internet, but are kind of obsessive and want to do everything in the most efficient way possible, even if that means (ironically) wasting two days trying to compare the fine print between half a dozen competing web services. 
+						</p>
+						<p>
+						Sound like you? Great! Read on and learn from my mistakes.
+						</p>
+						<p>
+						Before I get into details, it's worth explaining why it is actually tricky to set up your own personal website. Think of it like this: your partner asks you to go out and buy a can of tomato soup. Sounds simple on paper. Except you're buying it from the biggest supermarket in the world, on a day when they're having a fire sale. The moment you step in there, there's people yelling offers at you -- buy one can of tomato soup and get a can of beans half price -- and there's like 50 different brands of tomato soup, each with different pros and cons all crammed into the fine print on the label. Gourmet or budget? No preservatives? What do these little certification stickers mean?
+						</p>
+						<p>
+						Very soon, you have gone insane. What seemed like he simple task of buying tomato soup has become an impossibly complicated optimization problem. Well, setting up your own website is kind of like that. 
+						</p>
+						<p>
+						The first thing you want is your own domain name. If your name is Revolio Clockberg, the you would want revolioclockberg.com (I'm assuming nobody actually owns that one yet). If you do a web search about how to buy a domain name, you'll quickly find "lists of things to watch out for when buying a domain name". Those lists are scary. They make you think: Aw geez, if I slip up and buy from the wrong company, I'm gonna get screwed big time. And how will I ever decide what features I want bundled together with my domain registration?
+						</p>
+						<p>
+						Here's my advice: forget that stuff. Do a couple of quick searches to find out what the biggest and most popular domain name registrars are and pick one (based on my own research, in alphabetical order: Bluehost, Dreamhost, GoDaddy, Namecheap). Don't overthink it. And don't bother adding on any special features -- for your simple website, you won't need them. 
+						</p>
+						<p>
+						The only feature you definitely do want is "domain privacy". When you register a domain, you have to give the domain name registrar some personal information, like your full name and address. Without domain privacy, anybody will be able to look up this information by typing your website into <a href="https://lookup.icann.org/">iCANN WHOIS</a>. Domain privacy hides that information from the general public. This feature should be cheap (less than a dollar per year) or free with your domain name registration.
+						</p>
+						<p>
+						As we continue on our journey into the jungle of website hosting, we shall see that features and add-ons are the main problem. To make it through this jungle with a clear head, it helps to step back and look at the market forces that are driving this madness. The thing is, there are lots of people out there who want to set up a website. Many of those people are just like you: they only want something simple. But a lot of them represent companies who need to have all kinds of special features on their website. Even some individual entrepreneurs will want to have a lot more than just a few pages of static html. Professional writers might want something like Wordpress, which provides a whole suite of tools for analyzing web traffic, getting money through advertizing and affiliate links, selling products via ecommerce, and so on. But not you -- all you want is a page with your face on it, a little 'about me' blurb, and links to your social media and contact info. Right? 
+						</p>
+						<p>
+						So do you really need to go shopping around, looking for which web hosting platform offers the best features for the lowest price? Well, that's what I spent most of my time doing, until I suddently realized, in a flash of inspiration, that I didn't need any of that stuff, and so I shouldn't have to pay for it. Quality web hosting costs upwards of about $4 per month. (If you find one for less, you'll have to trawl through their terms and conditions to find out what the catch is, and do you really want to punish yourself like that?) I actually bought a pretty good hosting plan with BlueHost, with domain name registration bundled in, and ended up cancelling it when I realized that I was paying for a ton of (no doubt excellent) features that I simply did not need. 
+						</p>
+						<p>
+						Here's the beautiful principle that I have discovered. Think of it as your machete for chopping a path through the overwhelming jungle of online services. The principle is: don't go looking at services and trying to decide whether you want them. Instead, start by getting clear about what you need, and ruthlessly exclude anything that offers you more than that. If what you need is very simple, then this is by far the most efficient way to proceed.
+						</p>
+						<p>
+						Here's what I did: I got my website hosted for free through Github Pages, using my own custom domain name. All I pay is my domain name registration, which costs me a grand total of $13 a year. If you want to do the same, I'll walk you through it.
+						</p>
+						<p>
+						The first thing you need to know is the very basics of using Github. If you are a person who is scared of tech, maybe this is too much of a barrier for you -- but really, it is pretty easy. 
+						</p>
+						<p>
+						git is a very popular version control software. "Version control" is something that anybody needs if they are involved in working on a large project with many simultaneous contributers. If you're an academic like me, you've probably had the experience of sharing files with your co-authors, with names like "version-17-Bobs-edits" and "version-17b-Sallys-edits" and "version-17c-Johns-attempt-to-resolve-conflicts-between-Bob-and-Sallys-edits" and so on. And you probably thought to yourself, "what if there were a more efficient way to keep track of people's edits and resolve conflicts and overlaps between them?" Well that's exactly what git is! Unfortunately most people who really could benefit from using git have no idea how to use it.
+						</p>
+						<p>
+						Basically, you have some files in a folder on your computer, and you want to use git for version controlling them. But since you want to share these files with your collaborators, you need an online platform that will host your files, and where your collaborators can download them, make edits, and then re-upload them. And you want this online platform to understand the language of git, so that when people simultaneously upload their edits, they can type in special git commands to keep track of versions, merge their edits together in a consistent way, and all of that nice version control stuff. That platform is Github.
+						</p>
+						<p>
+						Now, today we're just making a personal website that only you will edit, so technically you don't need git at all. However, there are two reasons why you might want to do this through Github. Firstly, Github offers a service called Github Pages, which offers free website hosting if you manage your website through Github. Secondly, if you've been meaning to learn git, this is a great excuse to get started!
+						</p>
+						<p>
+						The first thing to do is download and install git. After that, check that it is working by opening up a command line and typing <code>git</code>; you should see a list of commands and explanations. If you get a "command not recognized" error you might need to check that git was added to your PATH variable, or try reinstalling.
+						</p>
+						<p>
+						Now go to github.com and create your account. Once you've logged in, you need to create a new repository. Just go to the "repositories" tab and click the "New" button. A "repository" is just Github's fancy name for a folder with your files in it that is hosted on Github. The idea is that you should have one repository for each project that you have. In this case we are making a repository that will keep all of your website files. Keep all the default options, just make sure it is set to "Public", and make sure you name your repository "username.github.io", where username is your GitHub username. For example if your username is revolioclockberg, you should name the repository <code>revolioclockberg.github.io</code>. You have to give it this name, because that is how Github Pages knows that this is where you keep your website files.
+						</p>
+						<p>
+						Next, open up a command line and navigate to the folder on your computer where you want to keep your website files. Type
+						</p>
+						<p>
+						<code>git clone https://github.com/revolioclockberg/revolioclockberg.github.io</code>
+						</p>
+						<p>
+						This is telling git that you want to download a copy of your Github repository on your computer, so that you can make edits to it. This should create a new folder called revolioclockberg.github.io on your computer. Change into that folder by typing
+						</p>
+						<p>
+						<code>cd /revolioclockberg.github.io</code>
+						</p>
+						<p>
+						Since this folder is empty, it's time to put your website in it! The easiest way to do this is browse the internet and find a nice downloadable website template that you like. You can pay for one, but there are plenty of good free templates (I got mine from <a href="https://html5up.net/">HTML5-UP</a>). Download the template and unzip all the files into your revolioclockberg.github.io folder. (Or if you are feeling adventurous, why not learn HTML and CSS and write your own website files from scratch? Mozilla has a great <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">guide</a> you can follow). 
+						</p>
+						<p>
+						*Very important*: remember that you will soon be uploading all the files in your folder revolioclockberg.github.io onto a public website where anyone can see it. So absolutely do not put any files or information in this folder that you would not want the entire world to see. That includes comments written in your HTML files -- all of it will be visible to anyone! It is embarrassingly common for people to upload their secrets to public Github repositories. Don't do it!
+						</p>
+						<p>
+						Now you've made edits to your folder, and made sure there's no sensitive information in it, you are ready to upload them using git. Open a command line, navigate into the revolioclockberg.github.io folder if you aren't already there, and type
+						</p>
+						<p>
+						<code> git add --all </code> (Tells git to put all your edits in the "staging area")
+						</p>
+						<p>
+						<code> git commit -m "Created my website files" </code>
+						(Tells git to save a snapshot of all the edits in your staging area, and tags it with a little message to remind yourself what your edits were)
+						</p>
+						<p>
+						<code> git push -u origin master </code>
+						(Tells git to upload your edits and merge them with your repository on Github. "origin" and "master" are the name of git "branches", so you are telling git to take what is in the "master" branch, on your local filesystem, and move it to the "origin" branch, which is your online Github repository. You don't need to know about branches here, but it is worth learning about them if you want to use git for other things. The <code>-u</code> is useful because it lets you avoid specifying branch names later on when you do a <code>git pull</code>.)
+						</p>
+						<p>
+						Assuming all of that went smoothly, you should be able to log into Github and see that your revolioclockberg.github.io repository now has all your website files in it! (If it didn't work, try deleting your local copy of the repository and starting over again from the <code>git clone</code> step). 
+						</p>
+						<p>
+						That's the hard work done! Your website is now hosted on Github Pages. Open your browser and go to <code>https://revolioclockberg.github.io</code> and you should see your website.
+						</p>
+						<p>
+						If you want to make any changes to the website files, you have two options: you can either login to Github through your browser and make the changes directly to your online repository, or else you can edit the files locally on your computer and then upload them. I recommend the second method, because Github's online file editing capabilities are limited. But it is important that before you make any new changes to the files on your computer, that you make sure they are synchronized with your online repository. To do this, open a command line, navigate into your revolioclockberg.github.io folder, and type
+						</p>
+						<p>
+						<code> git pull </code>
+						</p>
+						<p>
+						This tells Github to download your files from your online repository and merge them with your local files, bringing them up to date if necessary. Next, make any new changes to the files in your revolioclockberg.github.io folder, and when you're done, just repeat the old pattern:
+						</p>
+						<p>
+						<code> git add --all </code>
+						</p>
+						<p>
+						<code> git commit -m "Some message about what you changed" </code>
+						</p>
+						<p>
+						<code>git push -u origin master </code>
+						</p>
+						<p>
+						If you're fine with having your website name as revolioclockberg.github.io then you are done. But probably you would rather have something like www.revolioclockberg.com as your website. Here's how you link your Github Pages site to your custom domain.
+						</p>
+						<p>
+						Let's say that you have purchased the domain name revolioclockberg.com. This is called an "apex" domain because it doesn't have the 'www' at the front, in contrast with www.revolioclockberg.com, which is called a subdomain. Since you own the apex domain, you automatically have rights to the subdomain as well. 
+						</p>
+						<p>
+						First log in to Github and open your revolioclockberg.github.io repository. Click 'Settings' and scroll down until you see the section labeled "Custom domain". Type www.revolioclockberg.com into the box and click 'Save'. This tells Github that whenever they receive traffic coming in to revolioclockberg.github.io, they should label it as www.revolioclockberg.com. But we're not done yet -- we also need to tell your domain name registrar that when people type revolioclockberg.com or www.revolioclockberg.com into their address bar, it should route that traffic to revolioclockberg.github.io. 
+						</p>
+						<p>
+						To do this, login to your account with your domain name registrar (that you signed up for when you bought your domain name). Look around or use their guide to find out where you can add a <code>CNAME</code> record to your domain. You should be an entry for "host record", where you write <code>www.revolioclockberg.com</code>, and an entry for "points to", where you write <code>revolioclockberg.github.io</code> . Save the record, and now you are finally done! Visit revolioclockberg.com in your browser and it should take you to your website.
+					    </p>
+						
+						<!--
+						<ul class="actions">
+							<li><a href="#" class="button">About Me</a></li>
+						</ul>
+						-->
+					</section>
+
+				<!-- Two -->
+				    <section id="two">
+						<ul class="actions">
+							<li><a href="index.html" class="button">Back to main</a></li>
+						</ul>
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form id="form_contact" method="post" action="https://formspree.io/mnqgykej">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" maxlength=30 /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="replyto" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<form method="post" >
+								<ul class="actions">
+									<li><input type="submit" form="form_contact" value="Send Message"/>
+									</li>
+								</ul>
+								</form>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Work</span></h3>
+										UMass Boston<br />
+										101 Morrissey Blvd<br />
+										02125 MA, United States
+									</li>
+									<!-- 
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										Rather not say.
+									</li>
+									-->
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@68raaneipj
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://twitter.com/JPienaar86" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/jlpienaar" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=pPk_LZQAAAAJ&hl=en" class="ai ai-google-scholar ai-2x"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>All text and illustrations &copy; 2020 Jacques Pienaar</li>
+						<li>All opinions are my own. Read at your own risk.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
