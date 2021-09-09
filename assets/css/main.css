@@ -222,7 +222,14 @@ input, select, textarea {
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
-
+    
+	pre.poem {
+		font-family: "Courier New", monospace;
+		font-style: italic;
+		font-size: 0.9em;
+		margin-left: 2em;
+	}
+	
 		pre code {
 			display: block;
 			line-height: 1.75em;
