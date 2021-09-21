@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jacques Pienaar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/academicons/css/academicons.min.css"/>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Jacques Pienaar</strong>
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Queues, stacks, and QRACs</h2>
+						</header>
+						<p>
+Algorithms are designed to solve problems that humans care about. One of the most basic problems that everybody faces is the problem of information storage and retrieval. If you don't believe me, just remember the last time you went to a big house party (you know... back in the before times). Throughout the course of the party, you probably met and exchanged names with a dozen new people, and you probably thought to yourself: 
+</p>
+<p>
+"How the heck will I remember all these names to avoid making a fool of myself in case I randomly bump into one of them at the supermarket next week?" 
+</p>
+<p>
+That is the essence of the problem of information storage and reteival, and numerous algorithms have been designed to solve it efficiently under various constraints.
+</p>
+<p>
+To formalize the problem, imagine you're an algorithm designer. You have a client who wants to store \(N\) bits of information in a way that makes it easy to retrieve. More specifically, they might want to use one of the following standard abstract data types or "collections":
+</p>
+<p>
+<strong>Bag:</strong> For efficiently adding items to an unordered collection;
+</p>
+<p>
+<strong>Queue:</strong> For efficiently adding items to the "back" of the queue, and retrieve items from the "front";
+ </p>
+<p>
+<strong>Stack:</strong> For efficiently adding and remove items at the "top" of the stack.
+</p>
+<p>
+In this case, the "items" are just classical bits. Your job is to find a way to implement the above data types in accordance with the memory and time constraints of the client. Usually the client wants to be able to perform the main tasks (adding and removing certain items) using an amount of time and memory that scales favourably with the size \(N\) of the stored data.
+</p>
+<p>
+We're going to focus on the issue of efficient memory usage. Classically, this boils down to choosing between two options depending on the client's resources. If the client knows approximately how large \(N\) will be and doesn't care much about saving on memory, then you can just pre-allocate a large block of memory to store an "array" of fixed size. Then any item can be retrieved in constant time just by checking its address in the array. On the other hand, if the client doesn't know how big \(N\) could get, or if they need to economize their memory usage, then we use a data structure called a "linked list" that dynamically allocates memory as items get added. That pretty much covers it.
+</p>
+<p>
+But let's suppose that your client has the option of using quantum hardware for storage. That is, imagine you have the option to implement your algorithm on a register of qubits instead of regular bits. Is there some way you can take advantage of quantum effects to store the information more efficiently? 
+</p>
+<p>
+As it turns out, the answer is yes, with a few qualifications that I'll talk about at the end of this post.
+</p>
+<p>
+The most basic thing we might want to do is see how many bits \(N\) we can cram into just 1 unit of memory. If our memory is 1 classical bit, the best we can do is to randomly pick one of the \(N\) bits to store and throw away the rest. When the client wants to retrieve a bit, there's a \(1 \over N\) chance that they ask for the bit that we stored, in which case we can return it without error. For any other bit, we just have to return a random value, which has a 50% chance of being correct. So our average success probability for retrieval is:
+\[
+p = \frac{1 + 0.5(N-1)}{N} = 0.5 \frac{1}{N} + 0.5 ,
+\]
+which as you might expect is not much better than pure guesswork (\( \approx 0.5 \)) for large \(N\). So the practical question is, if our client can tolerate an error probability \(E\) for retrieving any single bit, then how many bits can we cram into each unit of memory before our success probability drops below the acceptible threshold of \(p = 1-E \) ? Substituting this into the above and rearranging for \(N\) in terms of \(E\), we get:
+\[
+N \leq \frac{1 }{1 - 2E} \, ,
+\]
+where the inequality sign reminds us that \(N\) has to be an integer, so we have to round it down. For instance, suppose the client can tolarate a 30% failure probability, so \( E= 0.3 \). That means the largest number of bits \(N\) they can cram into 1 bit of classical memory is \( N \leq 2.5 \), and assuming we don't care about encoding fractions of bits, we take \(N\) to be the next lowest integer, \( N=2 \). So classically we can at best trade off 30% error in exchange for saving 50% memory.
+</p>
+<p>
+What about cramming \(N\) bits into a single qubit? It turns out there is a way to do this that has a better performance than the classical strategy, which takes advantage of a well-studied quantum phenomenon that goes by the name "quantum random access codes" or "QRACs" in the literature. 
+</p>
+<p>
+Despite the scary name, it's easy to understand what a QRAC does. Simply put, a \( (N,M,p) \) QRAC lets you cram \(N\) classical bits into \(M\) qubits, with success probability of \(p\) for retrieving any one of them. The details can get ugly, but we don't need to know what they are. The key point is that this "quantum cramming" can be done with a more favourable error tolerance than the best classical strategy.
+</p>
+<p>
+As an example, <a href="https://arxiv.org/abs/quant-ph/9804043">there is a \( (2,1,0.85) \) QRAC</a> that crams 2 bits into 1 qubit, and lets you retrieve either one of them later with an 85% success probability. By comparison, our randomized classical strategy forces us to choose one or the other bit to store, giving us an average success probability of at most 75%. 
+</p>
+<p>
+But what do these figures mean for the practical task of saving on memory? The literature usually fixes the number of bits \(N\) and qubits \(M\) , and then looks for explicit protocols that give the highest success probability \(p\). That's fine if you're a quantum physicist who likes to get your hands dirty optimizing states and measurement operators on a given Hilbert space. But what if we just want to make practical use of the results already found in the literature? 
+</p>
+<p>
+Suppose our client knows what their maximum error tolerance \(E\) is, and they want to find out how much they can save on storage space by using qubits instead of bits. So let's try to work that out from known results.
+</p>
+<p>
+The first thing to be aware of is that much of the literature on QRACs is not written in the context of information storage and retrieval (as we are considering here) but in the context of communication. In that setting, there is a "sender" who stores the \(N\) bits and a "receiver" who tries to retrieve one of them, according to some fixed previously agreed-upon strategy. But in our scenario the client is effectively playing the role of both "sender" and "receiver": they are just storing data to be retrieved later by themselves. That means we can do a little bit more, for instance, we can implement a random strategy that correlates the choice of encoding of the \(N\) bits with the choice of measurements used to recover them. So our scenario is actually equivalent to a special sub-case of QRACs considered in the literature, in which the sender and receiver have "shared randomness" (SR) between them.
+</p>
+<p>
+Luckily, some researchers have studied QRACs with SR, and we can directly use their results to understand how the error \(E\) scales with \(N\) as we try to cram more bits into a single qubit. <a href="https://arxiv.org/abs/0810.2937">Ambianis et al (2008)</a> proved that for any \( (N,1,p) \) QRAC with SR, the success probability is lower bounded by:
+\[
+\sqrt{\frac{2}{3 \pi N}} + 0.5 \\ 
+\]
+\[
+\approx 0.46 \left(\frac{1}{\sqrt N}\right) + 0.5 \, .
+\]
+Then, in an exciting development that hit the arXiv in June this year, <a href="https://arxiv.org/abs/2106.00155">Mančinska and Storgaard proved</a> an <i>upper</i> bound for \( (N,M,p) \) QRACs with SR, which for the case relevant to us where \(M=1\) reduces to:
+\[
+0.5 \left(\frac{1}{\sqrt N}\right) + 0.5 \, .
+\]
+Putting these together tells us that the quantum success probability decreases at a rate of order \(1 \over \sqrt N \), a quadratic improvement over the classical rate of \(1 \over N\). 
+</p>
+<p>
+But what does this mean in practical terms? If the client has an error tolerance of \(E\), how much space can they save using qubits? Rearranging for \(N\) in terms of \(E\) as before, we obtain the quantum rule:
+\[
+N \leq \frac{1}{(1 - 2E)^2} \, .
+\]
+Calling the classical result \(N_c \) and the quantum result \(N_q \) , we can quantify the "quantum advantage" by the ratio \(A \equiv N_q / N_c \), which works out to:
+\[
+A = \frac{1}{1 - 2E} \, .
+\]
+We see from this analysis that if the client's error tolerance \(E\) is low, there isn't much benefit from storing classical bits in quantum memory. However, a client with higher error tolerance can potentially reap the benefits of using less quantum memory. To flesh this out with some numbers, note that if we can afford to squeeze \( N_q \) bits into every qubit of storage, and \( N_c \) bits into every classical bit of storage, then storing N bits requires either \( N / N_q \) qubits or \( N / N_c \) classical bits (rounded up to the nearest integer). 
+</p>
+<p>
+So, for a client who can tolerate an error probability of \(E=0.15\), we calculate \(1/N_c = 0.7\) and \(1/N_q = 0.49\), implying that the quantum scheme reduces memory requirements by 51% while the classical scheme only reduces it by 30%. And if the client's error tolerance improves to \(E=0.35\), then the quantum scheme saves 91% of memory while the optimal classical scheme only saves 70%.
+</p>
+<p>
+Before you get too excited, there's a few sobering qualifications to keep in mind.
+</p>
+<p>
+Firstly, our discussion has only focused on the limited scenario in which the client wants to retrieve just one bit and then stop. But anyone using Bags, Stacks or Queues doesn't want to stop; they want to continue adding and removing items. The problem with the QRAC scheme is that after we retrieve just one of the \(N\) bits that were stored in a given qubit, our measurement affects the system in a way that makes it harder to retrieve the remaining bits that were stored in the same qubit. Retrieval corrupts a quantum memory in a way that makes it hard to use without some kind of error correction scheme to recover the remaining bits, and it is not clear whether this recovery can be done efficiently.
+</p>
+<p>
+Secondly, we've been comparing qubits to classical bits without much comment, but this is actually an assumption that involves a lot of subtleties. It's not unreasonable to hope that the resource cost of qubit memory in the future will be related to classical memory by just a constant factor, which from a purely abstract point of view is negligible. However, the quantum savings only start to kick in at quite high error tolerance, it seems unlikely that there would be many practical applications that would tolerate failure rates of \( \approx 30 \%\). Again, some kind of error correction would be needed to make the advantage worthwhile in a realistic scenario.
+</p>
+<p>
+Is there a way to deal with these shortcomings? I don't know! That's why you're reading this in a blog post and not on the arXiv :). But if you have any bright ideas, I'd be curious to know.
+</p>					
+						<!--
+						<ul class="actions">
+							<li><a href="#" class="button">About Me</a></li>
+						</ul>
+						-->
+					</section>
+
+				<!-- Two -->
+				    <section id="two">
+						<ul class="actions">
+							<li><a href="index.html" class="button">Back to main</a></li>
+						</ul>
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form id="form_contact" method="post" action="https://formspree.io/mnqgykej">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" maxlength=30 /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="replyto" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<form method="post" >
+								<ul class="actions">
+									<li><input type="submit" form="form_contact" value="Send Message"/>
+									</li>
+								</ul>
+								</form>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Work</span></h3>
+										UMass Boston<br />
+										101 Morrissey Blvd<br />
+										02125 MA, United States
+									</li>
+									<!-- 
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										Rather not say.
+									</li>
+									-->
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<span style="unicode-bidi:bidi-override; direction: rtl;">moc.liamg@68raaneipj
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://twitter.com/JPienaar86" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://github.com/jlpienaar" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=pPk_LZQAAAAJ&hl=en" class="ai ai-google-scholar ai-2x"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>All text and illustrations &copy; 2021 Jacques Pienaar</li>
+						<li>All opinions are my own. Read at your own risk.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
