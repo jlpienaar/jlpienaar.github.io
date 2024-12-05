@@ -7,8 +7,9 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* set opacity to 0 in image:before . previously was 0.5 */
-/* deleted url("images/overlay.png"), from background-image in header*/
+/* MY NOTES: 
+To change opacity of the header overlay, look at the opacity in the "colour=" paert of the header 
+*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2066,7 +2067,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0;
+			opacity: 0.5;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -2608,7 +2609,7 @@ input, select, textarea {
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0);
+		color: rgba(255, 255, 255, 0.7);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
